@@ -1,3 +1,5 @@
+// This snippet is based on the code from https://stackoverflow.com/questions/22137814/wordpress-shows-i-have-1-plugin-update-when-all-plugins-are-already-updated
+
 $output = "";
 
 // Check plugins
