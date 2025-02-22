@@ -13,3 +13,4 @@ You can find more information about that on https://mainwp.com/extension/code-sn
 
 - **show-ghost-updates**: If WordPress shows an available update but you can't find it on the Updates screen, it might be hidden. This script helps you find it.
 - **options-autloaded-size**: Check the total size of autoloaded options on a site and if it's more than a set value also show the 10 largest keys.
+- **remove-autoloaded-dirsize-transient**: On older versions of WordPress (<6.7) the Site Health information for Directories and Sizes was stored in an autoloaded transient. This script deletes that transient. The next time it's calculated it will be stored with autoload = off
