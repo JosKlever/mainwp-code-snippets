@@ -5,7 +5,7 @@
 **/
 global $wpdb;
 $pf = $wpdb->prefix;
-$q = "SELECT SUM(LENGTH(option_value)) as autoload_size FROM ".$pf."options WHERE autoload='yes';";
+$q = "SELECT SUM(LENGTH(option_value)) as autoload_size FROM ".$pf."options WHERE autoload IN ( 'yes', 'on', 'auto-on', 'auto');";
 $size = $wpdb->get_var($q);
 echo "Size: " . $size;
 
