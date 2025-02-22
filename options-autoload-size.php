@@ -10,7 +10,7 @@ $size = $wpdb->get_var($q);
 echo "Size: " . $size;
 
 if ($size > 100000 ) {
-	$qt = "SELECT option_name, LENGTH(option_value) AS option_value_length FROM ".$pf."options WHERE autoload='yes' ORDER BY option_value_length DESC LIMIT 10;";
+	$qt = "SELECT option_name, LENGTH(option_value) AS option_value_length FROM ".$pf."options WHERE autoload IN ( 'yes', 'on', 'auto-on', 'auto') ORDER BY option_value_length DESC LIMIT 10;";
 	$top_results = $wpdb->get_results($qt);
 	echo "<br>Largest keys:<br><table>";
 	foreach($top_results as $val=>$v) {
